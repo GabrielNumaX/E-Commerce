@@ -1,0 +1,18 @@
+APIS
+
+Homepage: https://5d76bf96515d1a0014085cf9.mockapi.io/product
+Product Details: https://5d76bf96515d1a0014085cf9.mockapi.io/product/1
+Create Order: https://5d76bf96515d1a0014085cf9.mockapi.io/order
+
+Banner Images:
+1) https://imgur.com/96OnkX7.png
+2) https://imgur.com/KtGxwnN.png
+3) https://imgur.com/sfjg9R8.png
+4) https://imgur.com/p0wdadG.png
+
+EdYoda Projects Logo:
+https://i.imgur.com/OKAY6Fl.png
+
+LOG:
+
+10.09.2019 - 15:45

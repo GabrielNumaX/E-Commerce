@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.div-header {
+  display:inline-block;
+  margin-left: 30px;
+}
+
+.div-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.div-header-search {
+  display: inline-block;
+  width: 220px;
+}
+
+.div-header-search input {
+  border: none;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 34px;
+  background-image: url('https://img.icons8.com/color/48/000000/search.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 4px 50%;
+  box-shadow: 2px 2px 2px 2px #cccccc blur;
+
+}
+
+.div-header-shop {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.div-header-shop img {
+  display: inline-block;
+}
+
+.shopping-cart {
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  margin-right: 18px;
+  margin-bottom: 4px;
+}
+
+.shop-counter {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 92px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  /*can't align vertically the counter number*/
+}
+
+.profile-pic {
+  display: inline-block;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.carousal-container::before {
+  content: "";
+  display: block;
+  padding-top: 38px;
+  margin-top: 100px;
+}
+
+
+/*footer*/
+
+footer {
+ bottom: 0;
+ display: flex;
+ box-sizing: border-box;
+ justify-content: space-around;
+ width: 100%;
+ background-color: black;
+}
+
+.footer-div {
+  display: inline-block;
+  width: 25%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-ul-h3 {
+  color: white;
+}
+
+.footer-p {
+  color: white;
+}
