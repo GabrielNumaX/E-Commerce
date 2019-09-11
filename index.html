@@ -5,6 +5,10 @@
     <title>E-Commerce Project</title>
 
     <link rel="stylesheet" href="./master.css">
+    <!-- slick css -->
+    <!-- type="text/css" ADDED TO AVOID "nosniff" ERROR -->
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
 
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -12,6 +16,8 @@
 			  crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
   </head>
   <body>
     <header>
@@ -31,10 +37,27 @@
     </header>
 
     <div class="carousal-container">
-      <!-- aca supuestamente van las fotos que deslizan-->
+      <div>
+        <img class="carousal-img" src="./pics/slide01.png" alt="Slide01">
+      </div>
+
+      <div>
+        <img class="carousal-img" src="./pics/slide02.png" alt="Slide02">
+      </div>
+
+      <div>
+        <img class="carousal-img" src="./pics/slide03.png" alt="Slide03">
+      </div>
+
+      <div>
+        <img class="carousal-img" src="./pics/slide04.png" alt="Slide04">
+      </div>
+
     </div>
 
-    <footer>
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./index.js"></script>
+    <!-- <footer>
       <div class="footer-div">
         <h3 class="footer-ul-h3">ONLINE STORE</h3>
 
@@ -71,7 +94,7 @@
           <p class="footer-p">UNITED STATES</p>
 
       </div>
-      <!-- EDYODA IMG -->
-    </footer>
+
+    </footer> -->
   </body>
 </html>

@@ -13,6 +13,38 @@ Banner Images:
 EdYoda Projects Logo:
 https://i.imgur.com/OKAY6Fl.png
 
+-----------------------------------------------------
+carousel - slick
+
+https://www.edyoda.com/course/1482?episode_id=2533
+
+JQuery plugins
+
+kenwheeler.github.io/slick
+
+- download code in zip
+- extract in folder for later link reference
+- add jquery
+- import slick files
+	- slick.min.js AT THE END OF HTML
+	- slick.css
+	- slick-theme.css
+
+- add js in file and script in html
+- this is the main structure
+
+$(document).ready(function(){
+  $('.your-class').slick({
+    setting-name: setting-value
+  });
+});
+
+from then on check: kenwheeler.github.io/slick
+for funcionalities
+
+
 LOG:
 
-10.09.2019 - 15:45
+10.09.2019 - 15:45 - 19:00
+11.09.2019 - 07:30
+
