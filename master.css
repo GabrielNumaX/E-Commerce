@@ -21,6 +21,13 @@ header {
 .div-header a {
   text-decoration: none;
   color: black;
+  font-size: 28px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.div-header a:first-of-type {
+  font-weight: bold;
 }
 
 .div-header-search {
@@ -38,7 +45,7 @@ header {
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: 4px 50%;
-  box-shadow: 2px 2px 2px 2px #cccccc blur;
+  background-color: #dddddd;
 
 }
 
@@ -83,7 +90,7 @@ header {
 /*this is a cheap way to avoid the header
 overlaping over the below element
 SHOULD FIND BETTER SOLUTION*/
-.carousal-container::before {
+.carousal-container:before {
   content: "";
   display: block;
   /* padding-top: 24px; */
@@ -91,38 +98,98 @@ SHOULD FIND BETTER SOLUTION*/
   margin-bottom: 60px;
 }
 
+/* if 100% horiz scroll */
 .carousal-container {
+  width: 97%;
+}
 
+.carousal-container div {
+  background-color: lightblue;
+  height: 100%;
+  /* 3% added from  above width
+  otherwise it scrolls
+  I DONT UNDERSTAND WHY*/
+  width: 103%;
+  margin: 0;
 }
 
 .carousal-img {
-  height: 280px;
-  text-align: center;
+  width: 88%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 24px;
   padding-bottom: 24px;
-
 }
 
-.carousal-container div {
-  background-color: blue;
-  height: 100%;
+/* HERE GOES THE API elements */
+
+h2 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+
+
+#clothes-div-container, #acc-div-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+/* PROBAR */
+  /* grid-gap: 32px; */
+  column-gap: 32px;
+  /* margin: 0 32px; */
+  width: 100%;
+}
+.clothes-div {
+  width: 200px;
+  margin-bottom: 24px;
+  /* padding-bottom: 24px; */
+  background-color: lightblue;
+}
+.clothes-div img {
   width: 100%;
 }
 
+h4, p , h3{
+  padding: 0 12px;
 
+}
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 8px;
+  padding-top: 12px;
+}
+
+/* p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
 
 
 /*footer*/
 
 footer {
  bottom: 0;
- display: flex;
+ /* display: flex;
  box-sizing: border-box;
  justify-content: space-around;
+ width: 100%; */
+ background-color: lightblue;
+ margin-top: 24px;
  width: 100%;
- background-color: black;
+}
+
+.footer-div-container {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
 }
 
 .footer-div {
@@ -133,9 +200,17 @@ footer {
 }
 
 .footer-ul-h3 {
-  color: white;
+  /* color: white; */
 }
 
 .footer-p {
-  color: white;
+  /* color: white; */
+}
+
+h5 {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+  letter-spacing: 2px;
 }

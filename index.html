@@ -20,82 +20,112 @@
 
   <body>
     <header>
-      <div class="div-header">
-        <a href="#">SHOPLANE</a>
-        <a href="#">CLOTHING</a>
-        <a href="#">ACCESORIES</a>
-      </div>
-      <div class="div-header-search">
-        <input type="text" name="search" placeholder="Your search here...">
-      </div>
-      <div class="div-header-shop">
-        <img class="shopping-cart" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png">
-        <div class="shop-counter">0</div>
-        <img class="profile-pic"src="https://img.icons8.com/plasticine/100/000000/user.png">
-      </div>
-    </header>
+        <div class="div-header">
+          <a href="#">SHOPLANE</a>
+          <a href="#clothes-div-container">CLOTHING</a>
+          <a href="#acc-div-container">ACCESORIES</a>
+        </div>
 
-    <div class="carousal-container">
-      <div>
-        <img class="carousal-img" src="./pics/slide01.png" alt="Slide01">
-      </div>
+        <div class="div-header-search">
+          <input type="text" name="search" placeholder="Your search here...">
+        </div>
+        <div class="div-header-shop">
+          <img class="shopping-cart" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png">
+          <div class="shop-counter">0</div>
+          <img class="profile-pic"src="https://img.icons8.com/plasticine/100/000000/user.png">
+        </div>
+      </header>
+<!-- img links where not loading that why I download them -->
+      <div class="carousal-container">
+        <div>
+          <img class="carousal-img" src="./pics/slide01.png" alt="Slide01">
+        </div>
 
-      <div>
-        <img class="carousal-img" src="./pics/slide02.png" alt="Slide02">
-      </div>
+        <div>
+          <img class="carousal-img" src="./pics/slide02.png" alt="Slide02">
+        </div>
 
-      <div>
-        <img class="carousal-img" src="./pics/slide03.png" alt="Slide03">
-      </div>
+        <div>
+          <img class="carousal-img" src="./pics/slide03.png" alt="Slide03">
+        </div>
 
-      <div>
-        <img class="carousal-img" src="./pics/slide04.png" alt="Slide04">
-      </div>
-
-    </div>
-
-    <!-- slick files -->
-    <script src="./slick-1.8.1/slick/slick.min.js"></script>
-    <script src="./index.js"></script>
-
-
-    <footer>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ONLINE STORE</h3>
-
-          <p class="footer-p">MEN CLOTHING</p>
-          <p class="footer-p">WOMEN CLOTHING</p>
-          <p class="footer-p">MEN ACCESORIES</p>
-          <p class="footer-p">WOMEN ACCESORIES</p>
+        <div>
+          <img class="carousal-img" src="./pics/slide04.png" alt="Slide04">
+        </div>
 
       </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
 
-          <p class="footer-p">HOME</p>
-          <p class="footer-p">ABOUT</p>
-          <p class="footer-p">CONTACT</p>
+      <!-- slick files -->
+      <script src="./slick-1.8.1/slick/slick.min.js"></script>
+      <script src="./index.js"></script>
 
+      <!-- API Elements -->
+      <!-- CLOTHES  -->
+      <h2>MEN AND WOMEN CLOTHINGS</h2>
+      <div id="clothes-div-container">
+        <!-- this is a template -->
+        <!-- <div class="clothes-div">
+          <img class="clothes-img" src="./01 Homepage.png" alt="template">
+          <h4 class="clothes-title">TITLE</h4>
+          <p class="clothes-brand">brand</p>
+          <h3 class="clothes-price">PRICE</h3>
+        </div> -->
       </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">PARTNERS</h3>
 
-          <p class="footer-p">ZARA</p>
-          <p class="footer-p">PANTALOONS</p>
-          <p class="footer-p">LEVIS</p>
-          <p class="footer-p">UCB</p>
-          <p class="footer-p">+ MANY MORE</p>
+        <!-- ACCESSORIES -->
+        <h2>ACCESSORIES FOR MEN AND WOMEN</h2>
+        <!-- I WILL JUST REUSE THE clothes CLASSES TO ADD CSS -->
+        <div id="acc-div-container">
 
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ADDRESS</h3>
+        </div>
 
-          <p class="footer-p">BUILDING 101</p>
-          <p class="footer-p">CENTRAL AVENUE</p>
-          <p class="footer-p">LA - 902722</p>
-          <p class="footer-p">UNITED STATES</p>
 
-      </div>
+
+      <footer>
+        <div class="footer-div-container">
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">ONLINE STORE</h3>
+
+              <p class="footer-p">MEN CLOTHING</p>
+              <p class="footer-p">WOMEN CLOTHING</p>
+              <p class="footer-p">MEN ACCESORIES</p>
+              <p class="footer-p">WOMEN ACCESORIES</p>
+
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
+
+              <p class="footer-p">HOME</p>
+              <p class="footer-p">ABOUT</p>
+              <p class="footer-p">CONTACT</p>
+
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">PARTNERS</h3>
+
+              <p class="footer-p">ZARA</p>
+              <p class="footer-p">PANTALOONS</p>
+              <p class="footer-p">LEVIS</p>
+              <p class="footer-p">UCB</p>
+              <p class="footer-p">+ MANY MORE</p>
+
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">ADDRESS</h3>
+
+              <p class="footer-p">BUILDING 101</p>
+              <p class="footer-p">CENTRAL AVENUE</p>
+              <p class="footer-p">LA - 902722</p>
+              <p class="footer-p">UNITED STATES</p>
+          </div>
+        </div>
+
+      <h5 class="copyright">
+        &copy; 2019 - NumaX
+      </h5>
     </footer>
+
+    <!-- EDYODA PIC -->
+
   </body>
 </html>
