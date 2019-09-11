@@ -80,6 +80,9 @@ header {
   margin: auto;
 }
 
+/*this is a cheap way to avoid the header
+overlaping over the below element
+SHOULD FIND BETTER SOLUTION*/
 .carousal-container::before {
   content: "";
   display: block;
