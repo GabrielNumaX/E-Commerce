@@ -103,7 +103,7 @@ var priceCloth;
 
                 $(newDiv).append(imgCloth, titleCloth, brandCloth, priceCloth);
 
-                console.log(newDiv);
+                // console.log(newDiv);
 
             }
           });
@@ -171,8 +171,44 @@ var priceCloth;
 
       fillAccDiv(data);
 
+        //this is to open CLOTH products.html from imgs
+        $('#clothes-div-container').on('click', '.clothes-div', function() {
+          // console.log('done');
+          // console.log(data);
+          // REMEMBER THIS
+          // console.log('key ' + key)
+          // console.log('value ' + myJson[i][key]);
+          // console.log(myJson[i]) //PRINTS WHOLE OBJECT
+          //THIS IS FOR ACCESSING THE INDEX AND THE VALUE WITH THE KEY
+          //console.log(myJson[0].brand);
+          var id = $(this).attr('id');
+          //ALSO
+          //var id = $(this).prop('id');
+
+          for(var i=0; i < data.length; i++) {
+
+            Object.keys(data[i]).forEach(function(key) {
+
+              if(id === data[i].id){
+
+                window.open("./product.html", "_self")
+
+              }
+
+
+             });
+           }
+        });
+
+        $('#acc-div-container').on('click', '.clothes-div', function() {
+          // console.log('done');
+        });
+
+
 
   });
+
+
 
 
 

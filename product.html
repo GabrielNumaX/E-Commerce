@@ -5,6 +5,7 @@
     <title>E-Commerce Project</title>
 
     <link rel="stylesheet" href="./master.css">
+    <link rel="stylesheet" href="./product.css">
 
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -13,62 +14,103 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+
   <body>
     <header>
-      <div class="div-header">
-        <a href="#">SHOPLANE</a>
-        <a href="#">CLOTHING</a>
-        <a href="#">ACCESORIES</a>
+        <div class="div-header">
+          <a href="#">SHOPLANE</a>
+          <a href="#clothes-div-container">CLOTHING</a>
+          <a href="#acc-div-container">ACCESORIES</a>
+        </div>
+
+        <div class="div-header-search">
+          <input type="text" name="search" placeholder="Your search here...">
+        </div>
+        <div class="div-header-shop">
+          <img class="shopping-cart" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png">
+          <div class="shop-counter">0</div>
+          <img class="profile-pic"src="https://img.icons8.com/plasticine/100/000000/user.png">
+        </div>
+      </header>
+
+      <div class="separate-div">
+        <!-- this is just to avoid header overlaping -->
       </div>
-      <div class="div-header-search">
-        <input type="text" name="search" placeholder="Your search here...">
+
+      <div class="product-container">
+        <aside class="aside-pic">
+          aside
+        </aside>
+
+        <main class="main-product">
+          <h1 class="prod-title">title</h1>
+          <h2 class="prod-brand">brand</h2>
+          <h3 class="prod-price">price</h3>
+          <p class="prod-desc">description</p>
+
+          <div class="prod-box">
+            <div class="prod-preview">
+                <img class"preview-img" src="" alt="">
+            </div>
+
+            <div class="button-div">
+              <button type="button" name="button">Add to Cart</button>
+            </div>
+          </div>
+
+
+        </main>
       </div>
-      <div class="div-header-shop">
-        <img class="shopping-cart" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png">
-        <div class="shop-counter">0</div>
-        <img class="profile-pic"src="https://img.icons8.com/plasticine/100/000000/user.png">
+
+      <div class="separate-div2">
+        <!-- this is just to avoid header overlaping -->
       </div>
-    </header>
 
+      <footer>
+        <div class="footer-div-container">
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">ONLINE STORE</h3>
 
-    <footer>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ONLINE STORE</h3>
+              <p class="footer-p">MEN CLOTHING</p>
+              <p class="footer-p">WOMEN CLOTHING</p>
+              <p class="footer-p">MEN ACCESORIES</p>
+              <p class="footer-p">WOMEN ACCESORIES</p>
 
-          <p class="footer-p">MEN CLOTHING</p>
-          <p class="footer-p">WOMEN CLOTHING</p>
-          <p class="footer-p">MEN ACCESORIES</p>
-          <p class="footer-p">WOMEN ACCESORIES</p>
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
 
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
+              <p class="footer-p">HOME</p>
+              <p class="footer-p">ABOUT</p>
+              <p class="footer-p">CONTACT</p>
 
-          <p class="footer-p">HOME</p>
-          <p class="footer-p">ABOUT</p>
-          <p class="footer-p">CONTACT</p>
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">PARTNERS</h3>
 
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">PARTNERS</h3>
+              <p class="footer-p">ZARA</p>
+              <p class="footer-p">PANTALOONS</p>
+              <p class="footer-p">LEVIS</p>
+              <p class="footer-p">UCB</p>
+              <p class="footer-p">+ MANY MORE</p>
 
-          <p class="footer-p">ZARA</p>
-          <p class="footer-p">PANTALOONS</p>
-          <p class="footer-p">LEVIS</p>
-          <p class="footer-p">UCB</p>
-          <p class="footer-p">+ MANY MORE</p>
+          </div>
+          <div class="footer-div">
+            <h3 class="footer-ul-h3">ADDRESS</h3>
 
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ADDRESS</h3>
+              <p class="footer-p">BUILDING 101</p>
+              <p class="footer-p">CENTRAL AVENUE</p>
+              <p class="footer-p">LA - 902722</p>
+              <p class="footer-p">UNITED STATES</p>
+          </div>
+        </div>
 
-          <p class="footer-p">BUILDING 101</p>
-          <p class="footer-p">CENTRAL AVENUE</p>
-          <p class="footer-p">LA - 902722</p>
-          <p class="footer-p">UNITED STATES</p>
-
-      </div>
-      <!-- EDYODA IMG -->
+      <h5 class="copyright">
+        &copy; 2019 - NumaX
+      </h5>
     </footer>
+
+    <!-- EDYODA PIC -->
+
   </body>
 </html>
