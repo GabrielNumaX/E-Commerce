@@ -2,6 +2,8 @@ APIS
 
 Homepage: https://5d76bf96515d1a0014085cf9.mockapi.io/product
 Product Details: https://5d76bf96515d1a0014085cf9.mockapi.io/product/1
+/1 es id eso cambia la api del producto
+
 Create Order: https://5d76bf96515d1a0014085cf9.mockapi.io/order
 
 Banner Images:
@@ -100,11 +102,82 @@ $(function() {
 });
 
 ------------------------------------------------------
+TO LISTEN ON DYNAMIC ELEMENTS
+https://youtu.be/Wxnd21_f_pc
 
+('parent').on('click', 'dynamic element' ,function() {
+	$(this).
+});
+
+--------------------------------------------------------
+API calls and handling
+
+https://www.edyoda.com/course/1482?episode_id=2533
+
+25:00
+
+no local backend
+
+26:50 
+
+click on home PROD or ACC calls to backend and load data on product
+
+url/product/details.html?p=1 //query param -> id
+
+27:48 
+
+access param -> window.location.search -> ?p=1
+
+.split('=') -> ['?p', '9']
+
+var.split('=')[1] -> '9'
+
+send to backend to get data -> API id
+
+append to API call to send to backend url
+
+32:09 
+
+cart count
+
+01-backend cart: 
+02-brower storage: 
+
+console-> application->storage-> key/value
+
+window.localStorage -> shows
+window.localStorge.setItem('app-name', 'Final Project')
+//key value
+
+window.localStorage.getItem('app-name') -> 'Final Project'
+
+check for shopping-cart value in
+
+window.localStorage
+
+also for prices -> localStorage
+
+39:46
+
+display in cart
+
+43:00
+
+
+object in localStorage.setItem('key',JSON.stringify(object));
+-> "{"name":"john"}"
+
+JSON.parse(localStorage.getItem('key'))
+
+
+
+--------------------------------------------------------
 LOG:
 
 10.09.2019 - 15:45 - 19:00
 11.09.2019 - 07:30 - 15:00
-11.09.2019 - 17:00 - 
+11.09.2019 - 17:00 - 00:15
+12.09.2019 - 06:00 - 
+
 
 

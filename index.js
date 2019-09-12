@@ -12,6 +12,16 @@ $(document).ready(function(){
   console.log('carousal loaded')
 
 
+//this check for cart and sets values from localStorage
+  if(!localStorage.getItem('cartCounter')){
+    var counter = 0;
+    $('.shop-counter').text(counter);
+
+    localStorage.setItem('cartCounter', counter);
+  }
+  else {
+    $('.shop-counter').text(localStorage.getItem('cartCounter'))
+  }
     //
     // for(var i=0; i <myJson.length; i++) {
     //
@@ -173,8 +183,7 @@ var priceCloth;
 
         //this is to open CLOTH products.html from imgs
         $('#clothes-div-container').on('click', '.clothes-div', function() {
-          // console.log('done');
-          // console.log(data);
+
           // REMEMBER THIS
           // console.log('key ' + key)
           // console.log('value ' + myJson[i][key]);
@@ -191,17 +200,17 @@ var priceCloth;
 
               if(id === data[i].id){
 
-                window.open("./product.html", "_self")
+                window.open("./product.html", "_self");
 
               }
-
-
              });
            }
         });
-
+//this is to open ACCESSORIES products.html from imgs
         $('#acc-div-container').on('click', '.clothes-div', function() {
-          // console.log('done');
+
+          window.open("./product.html", "_self");
+          
         });
 
 

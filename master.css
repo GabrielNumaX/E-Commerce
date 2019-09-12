@@ -64,6 +64,7 @@ header {
   position: relative;
   margin-right: 18px;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .shop-counter {
@@ -146,6 +147,7 @@ h2 {
   margin-bottom: 24px;
   /* padding-bottom: 24px; */
   background-color: lightblue;
+  cursor: pointer;
 }
 .clothes-div img {
   width: 100%;

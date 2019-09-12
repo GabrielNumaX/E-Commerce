@@ -5,20 +5,23 @@
     <title>E-Commerce Project</title>
 
     <link rel="stylesheet" href="./master.css">
+    <link rel="stylesheet" href="./checkout.css">
 
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
 
+    <script src="./checkout.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
       <div class="div-header">
-        <a href="#">SHOPLANE</a>
-        <a href="#">CLOTHING</a>
-        <a href="#">ACCESORIES</a>
+        <a href="./index.html">SHOPLANE</a>
+        <a href="./index.html">CLOTHING</a>
+        <a href="./index.html">ACCESORIES</a>
       </div>
       <div class="div-header-search">
         <input type="text" name="search" placeholder="Your search here...">
@@ -30,48 +33,68 @@
       </div>
     </header>
 
-    <div class="carousal-container">
-      <!-- esto NO iria -->
+    <div class="checkout-separate">
+
     </div>
 
+    <main id="main-checkout">
+      <div id="checkout-list" class="side-div">
+        <!-- aca irian los articulos creados dynamic -->
+      </div>
+
+      <div id="checkout-total-div" class="side-div">
+        <h2 id="checkout-total-h2">Total Amount</h2>
+        <h3 id="total-amount">aca van los nros </h3>
+
+        <button id="buy-now"type="button" name="button">Buy Now</button>
+      </div>
+    </main>
+
     <footer>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ONLINE STORE</h3>
+      <div class="footer-div-container">
+        <div class="footer-div">
+          <h3 class="footer-ul-h3">ONLINE STORE</h3>
 
-          <p class="footer-p">MEN CLOTHING</p>
-          <p class="footer-p">WOMEN CLOTHING</p>
-          <p class="footer-p">MEN ACCESORIES</p>
-          <p class="footer-p">WOMEN ACCESORIES</p>
+            <p class="footer-p">MEN CLOTHING</p>
+            <p class="footer-p">WOMEN CLOTHING</p>
+            <p class="footer-p">MEN ACCESORIES</p>
+            <p class="footer-p">WOMEN ACCESORIES</p>
 
+        </div>
+        <div class="footer-div">
+          <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
+
+            <p class="footer-p">HOME</p>
+            <p class="footer-p">ABOUT</p>
+            <p class="footer-p">CONTACT</p>
+
+        </div>
+        <div class="footer-div">
+          <h3 class="footer-ul-h3">PARTNERS</h3>
+
+            <p class="footer-p">ZARA</p>
+            <p class="footer-p">PANTALOONS</p>
+            <p class="footer-p">LEVIS</p>
+            <p class="footer-p">UCB</p>
+            <p class="footer-p">+ MANY MORE</p>
+
+        </div>
+        <div class="footer-div">
+          <h3 class="footer-ul-h3">ADDRESS</h3>
+
+            <p class="footer-p">BUILDING 101</p>
+            <p class="footer-p">CENTRAL AVENUE</p>
+            <p class="footer-p">LA - 902722</p>
+            <p class="footer-p">UNITED STATES</p>
+        </div>
       </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">HELPFUL LINKS</h3>
 
-          <p class="footer-p">HOME</p>
-          <p class="footer-p">ABOUT</p>
-          <p class="footer-p">CONTACT</p>
+    <h5 class="copyright">
+      &copy; 2019 - NumaX
+    </h5>
+  </footer>
 
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">PARTNERS</h3>
+  <!-- EDYODA PIC -->
 
-          <p class="footer-p">ZARA</p>
-          <p class="footer-p">PANTALOONS</p>
-          <p class="footer-p">LEVIS</p>
-          <p class="footer-p">UCB</p>
-          <p class="footer-p">+ MANY MORE</p>
-
-      </div>
-      <div class="footer-div">
-        <h3 class="footer-ul-h3">ADDRESS</h3>
-
-          <p class="footer-p">BUILDING 101</p>
-          <p class="footer-p">CENTRAL AVENUE</p>
-          <p class="footer-p">LA - 902722</p>
-          <p class="footer-p">UNITED STATES</p>
-
-      </div>
-      <!-- EDYODA IMG -->
-    </footer>
   </body>
 </html>
