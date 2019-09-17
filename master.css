@@ -149,7 +149,13 @@ h2 {
   background-color: lightblue;
   cursor: pointer;
 }
-.clothes-div img {
+
+/*this was replaced BELOW .clothes-img*/
+/* .clothes-div img {
+  width: 100%;
+} */
+
+.clothes-img {
   width: 100%;
 }
 

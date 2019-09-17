@@ -44,6 +44,7 @@ $(document).ready(function(){
 //que tenga el CSS
 
 var newDiv;
+var anchorImg;
 var imgCloth;
 var titleCloth;
 var brandCloth;
@@ -74,7 +75,7 @@ var priceCloth;
 
         for(var i=0; i < obj.length; i++) {
           // console.log('index ' + obj[i]);
-
+          //there's a better way to do this -> obj[i].key
           Object.keys(obj[i]).forEach(function(key) {
              // REMEMBER THIS
              // console.log('key ' + key)
@@ -82,18 +83,27 @@ var priceCloth;
              // console.log(myJson[i]) //PRINTS WHOLE OBJECT
              //THIS IS FOR ACCESSING THE INDEX AND THE VALUE WITH THE KEY
              //console.log(myJson[0].brand);
-            //aca irian los if
+            //aca irian los if -> isAccesory = false
             if(key === 'isAccessory' && obj[i][key] === false){
 
                 clothDivContAdd();
 
                 $(newDiv).attr('id', obj[i].id);
 
+                //this was added LATER to create dynamic links
+                anchorImg = document.createElement('a');
+
+                $(anchorImg).attr('href', './product.html?id='+obj[i].id);
+                //this was added LATER to create dynamic links
+
                 imgCloth = document.createElement('img');
 
                 $(imgCloth).attr('class', 'clothes-img');
 
                 $(imgCloth).attr('src', obj[i].preview);
+
+                //this is to append the cloth img into the anchor tag
+                anchorImg.appendChild(imgCloth);
 
                 titleCloth = document.createElement('h4');
 
@@ -111,7 +121,8 @@ var priceCloth;
 
                 $(priceCloth).text('$ ' + obj[i].price);
 
-                $(newDiv).append(imgCloth, titleCloth, brandCloth, priceCloth);
+                //elements appended are on the same level
+                $(newDiv).append(anchorImg, titleCloth, brandCloth, priceCloth);
 
                 // console.log(newDiv);
 
@@ -134,12 +145,18 @@ var priceCloth;
                // console.log(myJson[i]) //PRINTS WHOLE OBJECT
                //THIS IS FOR ACCESSING THE INDEX AND THE VALUE WITH THE KEY
                //console.log(myJson[0].brand);
-              //aca irian los if
+              //aca irian los if -> isAccesory : true
               if(key === 'isAccessory' && obj[i][key] === true){
 
                   accDivContAdd();
 
                   $(newDiv).attr('id', obj[i].id);
+
+                  //this was added LATER to create dynamic links
+                  anchorImg = document.createElement('a');
+
+                  $(anchorImg).attr('href', './product.html?id='+obj[i].id);
+                  //this was added LATER to create dynamic links
 
                   imgCloth = document.createElement('img');
 
@@ -147,13 +164,14 @@ var priceCloth;
 
                   $(imgCloth).attr('src', obj[i].preview);
 
+                  //this is to append the cloth img into the anchor tag
+                  anchorImg.appendChild(imgCloth);
+
                   titleCloth = document.createElement('h4');
 
                   $(titleCloth).attr('class', 'clothes-title');
 
                   $(titleCloth).text(obj[i].name);
-
-                  // console.log(titleCloth + ' TITLE');
 
                   brandCloth = document.createElement('p');
 
@@ -165,7 +183,8 @@ var priceCloth;
 
                   $(priceCloth).text('$ '+ obj[i].price);
 
-                  $(newDiv).append(imgCloth, titleCloth, brandCloth, priceCloth);
+                  //appended elements are on the same level
+                  $(newDiv).append(anchorImg, titleCloth, brandCloth, priceCloth);
 
                   // console.log(newDiv);
               }
@@ -174,50 +193,40 @@ var priceCloth;
         }
 
 
+//access api/executes func to dynamic loading|listen to click
+//to open link
   $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product',
     function(data, status) {
-
       fillClothDiv(data);
-
       fillAccDiv(data);
 
-        //this is to open CLOTH products.html from imgs
-        $('#clothes-div-container').on('click', '.clothes-div', function() {
+      //here was a function to create dynamic link that were
+      //later used in window.open ('url' '_self')
+      //BAD LOGIC
+      //instead I created dynamic anchor tags with dymanic links
 
-          // REMEMBER THIS
-          // console.log('key ' + key)
-          // console.log('value ' + myJson[i][key]);
-          // console.log(myJson[i]) //PRINTS WHOLE OBJECT
-          //THIS IS FOR ACCESSING THE INDEX AND THE VALUE WITH THE KEY
-          //console.log(myJson[0].brand);
-          var id = $(this).attr('id');
-          //ALSO
-          //var id = $(this).prop('id');
+  }); //end GET
 
-          for(var i=0; i < data.length; i++) {
+//now POST to get params from API and load dynamic link
+//
+//Listen to ART or ACC
+//get ID
+//execute GET with ID
+//CREATE DYNAMIC LINK
+//OPEN in WINDOW
+//CREATE ELEMENTS
 
-            Object.keys(data[i]).forEach(function(key) {
-
-              if(id === data[i].id){
-
-                window.open("./product.html", "_self");
-
-              }
-             });
-           }
-        });
-//this is to open ACCESSORIES products.html from imgs
-        $('#acc-div-container').on('click', '.clothes-div', function() {
-
-          window.open("./product.html", "_self");
-          
-        });
-
-
-
-  });
-
-
+  // $('#clothes-div-container').on('click', '.clothes-div', function() {
+  //     //this gets the id
+  //     var id = $(this).attr('id');
+  //
+  //     $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id, function(data, status) {
+  //
+  //       var dynamicLink = './products/'+'?p='+data.id;
+  //       console.log(dynamicLink);
+  //
+  //     });//end post -> PARAM ?p=1
+  // });
 
 
 

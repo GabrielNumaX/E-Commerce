@@ -1,3 +1,13 @@
+13.09.2019
+
+how to open in browser dynamically created link (with params)
+being product.html an static file in anchor tags?
+
+I hope it's clear and maybe you could give us
+an example on how /product/details.html?p=1
+is opened.
+
+
 APIS
 
 Homepage: https://5d76bf96515d1a0014085cf9.mockapi.io/product
@@ -120,6 +130,9 @@ no local backend
 
 26:50 
 
+HANDLE URL PARAMS
+https://www.youtube.com/watch?v=zDovsTG2a7g
+
 click on home PROD or ACC calls to backend and load data on product
 
 url/product/details.html?p=1 //query param -> id
@@ -172,12 +185,93 @@ JSON.parse(localStorage.getItem('key'))
 
 
 --------------------------------------------------------
+13.09.2019 session 
+
+after for loop to print object key of JSON
+
+console.log(object[i].key)
+
+****************************
+en la function que crea dinamico para el objeto como parametro
+y luego adentro en cada elemento para obj.key
+
+luego ejecuta la function en el for loop de la llamada
+(obj[i]) del JSON
+
+******************************
+para una POST crea un obj y de ahi lo manda
+
+********************************
+OPEN DYNAMIC LINK ON BROWSER
+
+url with params en este caso un ID
+
+creates link with cardLink.href 'url.html?=params'+id
+
+CARGA EL .html
+
+VAIBHAV
+
+Its like write the basic HTML structure along with classes and 
+in Javascript select the ids of these elements and add the data 
+to these elements.
+
+1. Like you have a img tag in HTML file here 
+
+2. you will write a call to get the link for the image 
+from backend. 
+
+3. Once you get the data from backend you will select the 
+element using the id of this img tag
+
+4.  then set the src attribute value using the data 
+received from the API Call.
+
+-----------------------------------------------------------
+DYNAMIC LINKS
+
+cambia el href de los de los cardLink que serian los div
+creados dynamic
+
+var cardLink = document.createElement('a');
+cardLink.href = './details.html';
+
+todos los div van al mismo html (details)
+
+cardLink.href = './details.html?video_id=100'
+
+AHI ABRE EL DETAILS.HTML pero con el mismo param
+entonces lo hace dynamic
+
+cardLink.href = './details.html?video_id=' + videoObj.id;
+
+AHI ANDA DYNAMIC URL
+
+TENGO QUE HACER ESTO EN LOS DIV DE LOS ART Y ACC
+
+en la console -> location.search -> "?video_id=2"
+
+create structure -> response from backend 
+-> update html values
+
+PONE UNA IMG cualqiera en el html que despues updates
+el src
+
+hace la llamada get en details.
+
+y le pasa el thumbnail del OBJ para update
+el src.
+
+
+----------------------------------------------------------------
 LOG:
 
 10.09.2019 - 15:45 - 19:00
 11.09.2019 - 07:30 - 15:00
 11.09.2019 - 17:00 - 00:15
-12.09.2019 - 06:00 - 
+12.09.2019 - 06:00 - 12:30
+12.09.2019 - 14:40 - 17:00
+13.09.2019 - 
 
 
 
