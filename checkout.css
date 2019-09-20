@@ -1,7 +1,6 @@
 .checkout-separate {
   width: 100%;
-  height: 28px;
-  background-color: black;
+  height: 120px;
 }
 
 .checkout-separate::before {
@@ -10,38 +9,124 @@
   margin-top: 60px;
 }
 
+.checkout-separate h2, h5 {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-separate h2 {
+  margin-left: 70px;
+  /* margin-top: 30px; */
+  padding-top: 10px;
+  font-size: 38px;
+}
+
+.checkout-separate h5 {
+  margin-left: 70px;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
 #main-checkout {
   display: grid;
-  grid-template-columns: auto auto;
-  background-color: grey;
+  grid-template-columns: 45% 35%;
+  /* background-color: grey; */
+  justify-content: space-around;
   width: 100%;
   height: 550px;
 
 }
 
-.side-div {
+#checkout-list {
+  background-color: lightblue;
+  /* handle div overflow */
+  overflow: auto;
+}
+
+.check-prod-list {
+  display: inline-block;
+  width: 94%;
+  height: 22%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 12px;
+  margin-right: auto;
+  background-color: white;
+
+ }
+
+ .check-prod-list img {
+   display: inline-block;
+   height: 110px;
+   margin: 5px;
+ }
+/*the following 3 elements have position: absolute
+because I couldn't position them as a columns
+next to the img*/
+ .check-prod-list h3 {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   margin-left: 15px;
+   margin-top: 10px;
+   overflow-x: hidden;
+
+ }
+
+ .check-prod-list p {
+   display: inline-block;
+   margin: 0
+   padding: 0;
+   position: absolute;
+   margin-top: 50px;
+   margin-left: 3px;
+ }
+
+.check-prod-list h4 {
+  display: inline-block;
+  margin: 0
+  padding: 0;
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 3px;
+}
+
+
+#checkout-total-div {
+  background-color: lightblue;
+}
+
+#checkout-total-div span {
+  margin-left: 30px;
+}
+
+/* .side-div {
   width: 90%;
   background-color: blue;
   height:500px;
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
-}
+} */
 
 #checkout-total-h2 {
   text-align: left;
 }
 
 #total-amount {
+  display: inline-block;
   padding: 0;
   text-align: left;
   margin-bottom: 60px;
 }
 
-#checkout-total-h2, #total-amount, #buy-now {
+#checkout-total-h2, #buy-now {
   margin-left: 28px;
 }
 
 #buy-now {
+  display: block;
   cursor: pointer;
 }

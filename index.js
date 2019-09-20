@@ -9,7 +9,7 @@ $(document).ready(function(){
     speed: 2000,
     arrows: false,
   });
-  console.log('carousal loaded')
+  // console.log('carousal loaded')
 
 
 //this check for cart and sets values from localStorage
@@ -22,15 +22,13 @@ $(document).ready(function(){
   else {
     $('.shop-counter').text(localStorage.getItem('cartCounter'))
   }
-    //
-    // for(var i=0; i <myJson.length; i++) {
-    //
-    //   Object.keys(myJson[i]).forEach(function(key) {
-    //
-    //     // console.log('key ' + key)
-    //     // console.log('value ' + myJson[i][key]);
-    //   });
-    // }
+
+  //click on cart go to CHECKOUT.html
+  $('.shopping-cart').on('click', function() {
+
+    location.assign('./checkout.html');
+    
+  });
 
 //LOGICA: primero se lee el JSON de la API
 //luego con esos datos se filtra y crean los elementos
@@ -200,34 +198,11 @@ var priceCloth;
       fillClothDiv(data);
       fillAccDiv(data);
 
-      //here was a function to create dynamic link that were
+      //here was a function to create dynamic links that were
       //later used in window.open ('url' '_self')
       //BAD LOGIC
       //instead I created dynamic anchor tags with dymanic links
 
   }); //end GET
-
-//now POST to get params from API and load dynamic link
-//
-//Listen to ART or ACC
-//get ID
-//execute GET with ID
-//CREATE DYNAMIC LINK
-//OPEN in WINDOW
-//CREATE ELEMENTS
-
-  // $('#clothes-div-container').on('click', '.clothes-div', function() {
-  //     //this gets the id
-  //     var id = $(this).attr('id');
-  //
-  //     $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id, function(data, status) {
-  //
-  //       var dynamicLink = './products/'+'?p='+data.id;
-  //       console.log(dynamicLink);
-  //
-  //     });//end post -> PARAM ?p=1
-  // });
-
-
 
 }); //end of JQUERY

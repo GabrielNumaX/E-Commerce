@@ -115,7 +115,7 @@ $(function() {
 TO LISTEN ON DYNAMIC ELEMENTS
 https://youtu.be/Wxnd21_f_pc
 
-('parent').on('click', 'dynamic element' ,function() {
+$('parent').on('click', 'dynamic element' ,function() {
 	$(this).
 });
 
@@ -262,8 +262,100 @@ hace la llamada get en details.
 y le pasa el thumbnail del OBJ para update
 el src.
 
+----------------------------------------------------------------
+SRC FROM DYNAMIC IMG
+
+https://stackoverflow.com/questions/32761616/how-to-get-the-image-src-which-is-dynamically-created
 
 ----------------------------------------------------------------
+18.09.2019 session
+
+PRODUCT.html
+
+add to cart button -> localStorage
+
+currentObj in localStorage
+
+PRIMERO CREA currentObj (global) 
+y lo llena con data del .get
+de ahi lo manipula
+
+creates an array to store product list
+in btn add to cart
+
+add COUNT to obj in local Storage to
+
+
+*****************************************
+window.localStorge.setItem('app-name', 'Final Project')
+//key value
+
+object in localStorage.setItem('key',JSON.stringify(object));
+-> "{"name":"john"}"
+
+JSON.parse(localStorage.getItem('key'))
+
+*****************************************
+
+create prodList
+check and create to array
+check if it's 0 or not to push
+parse as array JSON.parse(obj)
+check for id
+check for position - update count
+else create count-push- push to localStorage
+
+CHECKOUT.HTML
+
+fetch prodList from localStorage
+updates cart count with that
+
+function to dynamically create html
+
+iterates over productList
+
+call function inside for loop 
+function(productList[i]) 
+
+filters OBJ and appends to div
+
+use $().html instead of $().text
+
+PLACE ORDER button
+
+IN REAL CASES OBJ HAS TO BE IDENTICAL
+TO BACKEND OBJ
+
+for...prodList
+
+  var prodObj = {formato con prodList[i].id etc.}
+
+
+BACKEND CALL
+
+function
+
+var dataObj = {
+  amount: amountVar,
+  products: prodList (array) pasa prodObj
+}
+
+$.post(/order API, dataObj, function() {
+ 
+  location.assign('url confirmation');
+ 
+  //clean localStorage
+
+  localStorage.setItem('product-list' []);
+  y tambien cart count  
+
+
+});
+
+
+
+
+-----------------------------------------------------------------
 LOG:
 
 10.09.2019 - 15:45 - 19:00
@@ -271,7 +363,11 @@ LOG:
 11.09.2019 - 17:00 - 00:15
 12.09.2019 - 06:00 - 12:30
 12.09.2019 - 14:40 - 17:00
-13.09.2019 - 
+17.09.2019 - 15:05 - 19:00
+18.09.2019 - 14:20 - 17:00
+19.09.2019 - 10:15 - 13:20
+19.09.2019 - 14:30 - 
+19.09.2019 - 
 
 
 
