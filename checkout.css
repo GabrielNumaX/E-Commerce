@@ -53,46 +53,46 @@
   margin-left: 12px;
   margin-right: auto;
   background-color: white;
-
  }
 
- .check-prod-list img {
-   display: inline-block;
+ .check-img-div {
+  display: table-cell;
+  vertical-align: middle;
+  width:100px;
+  height: 18%;
+  /* background-color: blue; */
+ }
+
+ .check-img-div img {
    height: 110px;
+   width: 80px;
    margin: 5px;
  }
-/*the following 3 elements have position: absolute
-because I couldn't position them as a columns
-next to the img*/
- .check-prod-list h3 {
-   display: inline-block;
-   margin: 0;
-   padding: 0;
-   position: absolute;
-   margin-left: 15px;
-   margin-top: 10px;
-   overflow-x: hidden;
 
- }
-
- .check-prod-list p {
-   display: inline-block;
-   margin: 0
-   padding: 0;
-   position: absolute;
-   margin-top: 50px;
-   margin-left: 3px;
- }
-
-.check-prod-list h4 {
-  display: inline-block;
-  margin: 0
-  padding: 0;
-  position: absolute;
-  margin-top: 90px;
-  margin-left: 3px;
+.check-text-div {
+  display: table-cell;
+  vertical-align: text-top;
+  width: 100%;
+  /* background-color: grey; */
 }
 
+.check-text-div h3, p, h4 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.check-text-div h3 {
+  margin: 10px 0 8px 12px;
+}
+
+.check-text-div p {
+  margin: 10px 0 4px 12px;
+}
+
+.check-text-div h4 {
+  margin: 10px 0 0 12px;
+}
 
 #checkout-total-div {
   background-color: lightblue;
@@ -129,4 +129,51 @@ next to the img*/
 #buy-now {
   display: block;
   cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+/* LETRAS DE CARD */
+@media (max-width: 780px) {
+
+  .check-text-div h3 {
+    font-size: 14px;
+  }
+
+  .check-text-div p {
+    font-size: 14px;
+  }
+
+  .check-text-div h4 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+
+/* CARD LIST */
+@media (max-width: 566px) {
+  .check-prod-list {
+    /* handle div overflow */
+    overflow-y: auto;
+  }
+
+  #checkout-total-h2, #buy-now {
+    margin-left: 10px;
+  }
+
+  #checkout-total-div span {
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 465px) {
+
+  #checkout-total-h2{
+    font-size: 18px;
+  }
+
+  #checkout-total-div span {
+    font-size: 14px;
+  }
+
 }

@@ -32,7 +32,7 @@ header {
 
 .div-header-search {
   display: inline-block;
-  width: 220px;
+  width: 200px;
 }
 
 .div-header-search input {
@@ -51,7 +51,8 @@ header {
 
 .div-header-shop {
   display: inline-block;
-  margin-right: 30px;
+  /* margin-right: 30px; */
+  padding-right: 30px;
 }
 
 .div-header-shop img {
@@ -220,4 +221,83 @@ h5 {
   font-size: 14px;
   padding: 20px 0;
   letter-spacing: 2px;
+}
+
+/* RESPONSIVE max-width: 978px; */
+
+
+@media (max-width: 987px){
+/* saca la barra de busqueda */
+  .div-header-search {
+    display: none;
+  }
+}
+
+@media (max-width: 962px){
+/* cambia cant de columnas de prod */
+  #clothes-div-container, #acc-div-container {
+  grid-template-columns: auto auto auto;
+  column-gap: 24px;
+  }
+  /* .clothes-div {
+  width: 200px;
+  margin-bottom: 24px;
+  background-color: lightblue;
+  }  */
+}
+
+@media (max-width: 703px){
+
+  .div-header a {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  #clothes-div-container, #acc-div-container {
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  column-gap: 12px;
+  }
+  .clothes-div {
+  width: 180px;
+  }
+}
+
+@media (max-width: 547px){
+  .div-header {
+    margin-left: 12px;
+  }
+
+  .div-header a {
+    font-size: 14px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .shopping-cart {
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .shop-counter {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 76px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+  }
+
+  .profile-pic {
+    width: 35px;
+  }
+
+  .footer-ul-h3 {
+    font-size: 14px;
+  }
+
+  .footer-p {
+  font-size: 12px;
+  }
+
 }

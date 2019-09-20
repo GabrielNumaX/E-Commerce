@@ -93,40 +93,51 @@ $(document).ready(function() {
     //product price
 
     //this is for DYNAMIC CONTENT
-    //<div id="checkout-list" THIS IS WHERE IT GET CREATED
+    // #checkout-list IS PARENT EXISTING ELEMENT
+    // <div id="checkout-list" class="side-div">
+    // BELOW IS TO CREATE
     // <div class="check-prod-list">
-    //   <img src=""> key -> preview
-    //   <h3>Title</h3> key -> name
-    //   <p>Quantity</p> key -> count
-    //   <h4>Price $</h4> key -> price
+    //   <div class="check-img-div">
+    //     <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg">
+    //   </div>
+    //   <div class="check-text-div">
+    //     <h3>Title</h3>
+    //     <p>Quantity</p>
+    //     <h4>Price $</h4>
+    //   </div>
     // </div>
 
     function loadCheckProd(obj) {
+      // create card
       newDiv = document.createElement('div');
       newDiv.classList.add('check-prod-list');
-      // newDiv.innerHTML = 'NEW DIV';
-
+      //img div
+      imgDiv = document.createElement('div');
+      imgDiv.classList.add('check-img-div')
+      //img
       newImg = document.createElement('img');
-
       $(newImg).attr('src', obj.preview);
-
+      //img inside img-div
+      $(imgDiv).append(newImg);
+      //text-div
+      textDiv = document.createElement('div');
+      textDiv.classList.add('check-text-div');
+      //title
       newH3 = document.createElement('h3');
-
       $(newH3).html(obj.name);
-
+      //quatity
       newP = document.createElement('p');
-
       $(newP).html('Quantity: '+ obj.count);
-
+      //price
       newH4 = document.createElement('h4');
-
       $(newH4).html('Price $'+ obj.price);
+      //title,qty,price INSIDE text-div
+      $(textDiv).append(newH3, newP, newH4);
 
-      $(newDiv).append(newImg, newH3, newP, newH4);
-
+      //img-div & text-div INSIDE card
+      $(newDiv).append(imgDiv, textDiv);
+      //card inside list
       $('#checkout-list').append(newDiv);
-
-      // console.log($('#checkout-list'));
     }
 
     //#total-amount
