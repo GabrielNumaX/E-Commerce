@@ -178,6 +178,12 @@ h3 {
   text-overflow: ellipsis;
 } */
 
+#edyoda {
+  position: relative;
+  width: 120px;
+  left: 85%;
+}
+
 
 /*footer*/
 
