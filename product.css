@@ -171,10 +171,13 @@ affecting preview pics*/
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 498px) {
 /* el title */
   .prod-title {
     font-size: 22px;
+  }
+  .prod-box {
+    margin-left: 8px;
   }
 
   /* el div las preview-img */
@@ -185,7 +188,7 @@ affecting preview pics*/
 
   .preview-img {
     /* height: 90px; */
-    width: 18%;
+    width: 16%;
     margin-top: 3%;
   }
 }

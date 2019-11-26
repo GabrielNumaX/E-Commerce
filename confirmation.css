@@ -19,18 +19,22 @@
 }
 
 #confirmation-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  margin: 0 auto;
   width: 180px;
   height: 180px;
+  margin: 0 auto;
 }
-/*animatio try out*/
+/*animation try out*/
+/* can't manage to set check/tick on center when animation runs */
 .animation {
   display: block;
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
   background-color: lightblue;
@@ -43,14 +47,42 @@
   from {
     width: 169px;
     height: 169px;
+    transform-origin: center;
   }
   to {
     width: 130px;
     height: 130px;
+    transform-origin: center;
   }
 }
 
-.animation::before {
+.check-left {
+  position: relative;
+  width: 50px;
+  height: 8px;
+  background-color: white;
+  border-bottom: 8px;
+  position: absolute;
+  transform: rotate(135deg);
+  right: 30px;
+  bottom: 70px;
+  /* transform-origin: 90% 500%; */
+}
+
+.check-right {
+  position: relative;
+  width: 25px;
+  height: 8px;
+  background-color: white;
+  border-bottom: 8px;
+  position: absolute;
+  transform: rotate(45deg);
+  transform-origin: center;
+  right: 63px;
+  bottom: 61px;
+}
+
+/* .animation::before {
   content: '';
   display: block;
   width: 50px;
@@ -61,9 +93,9 @@
   transform: rotate(135deg);
   right: 30px;
   bottom: 70px;
-}
+} */
 
-.animation::after {
+/* .animation::after {
   content: '';
   display: block;
   width: 25px;
@@ -72,9 +104,10 @@
   border-bottom: 8px;
   position: absolute;
   transform: rotate(45deg);
+  transform-origin: center;
   right: 63px;
   bottom: 61px;
-}
+} */
 
 
 .confirmation-h2 {
