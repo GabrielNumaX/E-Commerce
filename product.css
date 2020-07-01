@@ -26,13 +26,14 @@
 
 .aside-pic {
   display: inline-block;
-  height: 400px;
+  height: 400px;  
   width: 28%;
   margin-left: 24px;
 }
 
 .aside-pic img {
-  width: 100%
+  width: 100%;
+  max-height: 400px;
 }
 
 .main-product {

@@ -9,12 +9,16 @@ $(document).ready(function() {
       $('.shop-counter').text(localStorage.setItem('cartCounter', '0'))
     }
 
+    // $('#buy-now').on('click', function() {
+
+    // });
+
+
     $('#buy-now').on('click', function() {
 
-    });
+      console.log('buy now clicked');
 
-
-    $('#buy-now').on('click', function() {
+      console.log(productList);
 
       //this is a template to create OBJECTS
       var orderItemArr = [];
@@ -26,7 +30,7 @@ $(document).ready(function() {
           'name': productList[i].name,
           'price': productList[i].price,
           'preview': productList[i].preview,
-          'isAccesory': productList[i].isAccsesory
+          'isAccessory': productList[i].isAccessory
         }
 
         orderItemArr.push(prodObj);
@@ -44,15 +48,25 @@ $(document).ready(function() {
 
       // console.log(dataObj)
 
-      $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', dataObj,
-        function() {
-          // alert('order placed');
 
-          localStorage.setItem('cartCounter', '0');
-          localStorage.setItem('prodList', []);
+      // this POST request is returning 400 BAD REQUEST 
+      // so I commented it to go to confirmation and EMPTY CART
+      // $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', dataObj,
+      //   function() {
+      //     alert('order placed');
 
-          location.assign('./confirmation.html');
-        });
+      //     localStorage.setItem('cartCounter', '0');
+      //     localStorage.setItem('prodList', []);
+
+      //     location.assign('./confirmation.html');
+      //   });
+
+      localStorage.setItem('cartCounter', '0');
+      // localStorage.setItem('prodList', []);
+
+      localStorage.removeItem('prodList');
+
+      location.assign('./confirmation.html');
     }) //end #buy-now function
 
     //this is TO CHECK localStorage and if true
